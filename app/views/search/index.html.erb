@@ -1,9 +1,11 @@
-<p><Strong>Station Name:</strong> <%=  %></p>
-<p><Strong>Address:</strong> <%=  %></p>
-<p><Strong>Fuel Type:</strong> <%=  %></p>
-<p><Strong>Access Times:</strong> <%=  %></p>
+<p><Strong>Station Name:</strong> <%= @station.name %></p>
+<p><Strong>Address:</strong> <%= @station.address %></p>
+<p><Strong>Fuel Type:</strong> EV Connectors <%= @station.connector_type.join(', ') %></p>
+<p><Strong>Access Times:</strong> <%= @station.access_times %></p>
 <br>
-<p><Strong>Distance from <%= params[:location] %>:</strong> <%=  %></p>
-<p><Strong>Travel time from <%= params[:location] %>:</strong> <%=  %></p>
+<p><Strong>Distance from <%= params[:location] %> (in miles):</strong> <%= @directions.distance %></p>
+<p><Strong>Travel time from <%= params[:location] %> (in minutes):</strong> <%= @directions.time %></p>
 <p><Strong>Directions from <%= params[:location] %>:</strong></p>
-<p><%=  %></p>
+<% @directions.nav.each do |direct|%>
+  <p><%= direct %></p>
+  <% end %>

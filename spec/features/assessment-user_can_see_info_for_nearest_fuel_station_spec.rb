@@ -29,11 +29,13 @@ RSpec.describe 'Assessment User Story', :vcr, type: :feature do
     expect(current_path).to eq('/search')
     expect(page).to have_content('Station Name: CBRE As Agent for EQC Operating Trust')
     expect(page).to have_content('Address: 1225 17th Street, Suite 130')
-    expect(page).to have_content('Fuel Type: EV Connector J1772')
+    expect(page).to have_content('Fuel Type: EV Connectors J1772')
     expect(page).to have_content('Access Times: MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified')
 
-    expect(page).to have_content('Distance from 1331 17th St LL100, Denver, CO 80202: 0.0888 mi')
-    expect(page).to have_content('Travel time from 1331 17th St LL100, Denver, CO 80202: something')
-    expect(page).to have_content('Directions from 1331 17th St LL100, Denver, CO 80202: something')
+    expect(page).to have_content('Distance from 1331 17th St LL100, Denver, CO 80202 (in miles): 0.081')
+    expect(page).to have_content('Travel time from 1331 17th St LL100, Denver, CO 80202 (in minutes): 1')
+    expect(page).to have_content('Directions from 1331 17th St LL100, Denver, CO 80202:')
+    expect(page).to have_content('Start out going southeast on 17th St toward Larimer St/CO-33.')
+    expect(page).to have_content('1225 17TH ST, SUITE 130 is on the right.')
   end
 end
