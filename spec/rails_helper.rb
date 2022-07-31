@@ -67,3 +67,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+VCR.configure do |config|
+  config.filter_sensitive_data('<api_key>') { ENV['nrel_api_key'] }
+  config.filter_sensitive_data('<api_key>') { ENV['mapquest_api_key'] }
+end
