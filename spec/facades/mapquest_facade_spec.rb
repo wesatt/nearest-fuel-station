@@ -9,7 +9,7 @@ RSpec.describe MapquestFacade do
 
       expect(directions).to be_a(Route)
       expect(directions.nav).to be_a(Array)
-      expect(directions.time).to be_a(Float)
+      expect(directions.time).to be_a(Float).or be_a(Integer)
       expect(directions.distance).to be_a(Float)
     end
   end

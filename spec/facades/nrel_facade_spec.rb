@@ -9,7 +9,7 @@ RSpec.describe NrelFacade do
       expect(station).to be_a(Station)
       expect(station.name).to be_a(String)
       expect(station.address).to be_a(String)
-      expect(station.fuel_type).to be_a(String)
+      expect(station.connector_type).to be_a(Array)
       expect(station.access_times).to be_a(String)
       expect(station.distance).to be_a(Float)
     end
