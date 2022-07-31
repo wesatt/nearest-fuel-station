@@ -11,7 +11,7 @@ RSpec.describe Route do
         '1225 17TH ST, SUITE 130 is on the right.'
       ]
     )
-    expect(route.time).to eq(18)
+    expect(route.time).to eq(1)
     expect(route.distance).to eq(0.081)
   end
 end

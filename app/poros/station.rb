@@ -13,8 +13,8 @@ class Station
   end
 
   def address
-    @data[:street_address] + ' ' +
-    @data[:city] + ',' +
+    @data[:street_address] + ', ' +
+    @data[:city] + ', ' +
     @data[:state] + ' ' +
     @data[:zip]
   end

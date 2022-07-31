@@ -10,5 +10,5 @@ RSpec.describe Station do
     expect(station.connector_type).to eq(['J1772'])
     expect(station.access_times).to eq('MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified')
     expect(station.distance).to eq(0.0888)
-end
+  end
 end
