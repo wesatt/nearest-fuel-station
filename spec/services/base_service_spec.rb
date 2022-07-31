@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe BaseService do
+RSpec.describe BaseService, :vcr do
   describe 'connections' do
     it '.nrel_conn establishes connection to NREL API' do
       expect(NrelService.nrel_conn).to be_a(Faraday::Connection)

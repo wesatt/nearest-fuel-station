@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SearchController < ApplicationController
   def index
     @station = NrelFacade.find_station(params[:location])

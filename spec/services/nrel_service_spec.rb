@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe NrelService do
+RSpec.describe NrelService, :vcr do
   describe 'responses' do
     it '.find_nearest_electric_station(address) returns a json with the nearest electric charging station' do
       address = '1331 17th St LL100, Denver, CO 80202'

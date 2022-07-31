@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe MapquestService do
+RSpec.describe MapquestService, :vcr do
   describe 'responses' do
     it '.find_directions(from_address, to_address) returns a json with directions to the nearest electric charging station' do
       from_address = '1331 17th St LL100, Denver, CO 80202'

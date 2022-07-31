@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BaseService
   def self.nrel_conn
     Faraday.new('https://developer.nrel.gov') do |req|

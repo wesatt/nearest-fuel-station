@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe MapquestFacade do
+RSpec.describe MapquestFacade, :vcr do
   describe 'getting directions' do
     it '.find_directions(from_address, to_address) returns a PORO with a list of directions' do
       from_address = '1331 17th St LL100, Denver, CO 80202'

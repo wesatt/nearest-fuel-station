@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe NrelFacade do
+RSpec.describe NrelFacade, :vcr do
   describe 'getting station' do
     it '.find_station(address) returns a PORO for the nearest electric charging station' do
       address = '1331 17th St LL100, Denver, CO 80202'
@@ -14,5 +16,4 @@ RSpec.describe NrelFacade do
       expect(station.distance).to be_a(Float)
     end
   end
-
 end

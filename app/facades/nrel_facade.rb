@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NrelFacade
   def self.find_station(address)
     json = NrelService.find_nearest_electric_station(address)
